@@ -1,0 +1,92 @@
+site_name: minmax-fx-research-web
+site_description: minmax-fx-day-trading-lab の研究成果を一般公開する閲覧専用 Web サイト
+site_url: https://hasebe201114-cyber.github.io/minmax-fx-research-web/
+repo_url: https://github.com/hasebe201114-cyber/minmax-fx-research-web
+repo_name: hasebe201114-cyber/minmax-fx-research-web
+copyright: Copyright &copy; 2026 minmax チーム
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切替
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切替
+  font:
+    text: Noto Sans JP
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - ホーム: index.md
+  - プロジェクト概要: about.md
+  - 研究成果:
+    - 概要: research/index.md
+    - 戦略仕様: research/strategy-spec.md
+    - 通貨ピボット: research/pair-pivot.md
+    - アブレーション: research/ablation.md
+  - バックテスト結果:
+    - サマリ: backtest-results/index.md
+    - 2024 USD/JPY: backtest-results/usd-jpy-2024.md
+  - 資料・議事録: papers/index.md
+  - Adversarial レビュー: papers/adversarial/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+
+plugins:
+  - search
+
+validation:
+  nav:
+    omitted_files: ignore
+    not_found: warn
+    absolute_links: warn
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hasebe201114-cyber
+  generator: false

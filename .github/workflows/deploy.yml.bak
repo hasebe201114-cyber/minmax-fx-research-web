@@ -1,0 +1,85 @@
+name: Deploy MkDocs site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# GitHub Pages デプロイに必要な権限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時デプロイの防止 (古いビルドのデプロイ回避)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-build.txt
+
+      - name: Install runtime dependencies (mkdocs)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install build-time dependencies (matplotlib, for chart generation)
+        run: |
+          pip install -r requirements-build.txt
+
+      - name: Sync artifacts from lab PJ (best-effort)
+        # ラボ PJ (minmax-fx-day-trading-lab) は別リポのため CI では取得不可。
+        # ローカルで sync 済みの docs/backtest-results/ docs/papers/ をそのまま使う。
+        run: |
+          echo "Skipping lab sync in CI (lab PJ is a separate repo)."
+          echo "Run scripts/sync_from_lab.py locally before pushing if you need fresh lab data."
+
+      - name: Generate charts (balance / drawdown)
+        run: |
+          # ラボ PJ からの trades-*.json が必要。
+          # ラボ PJ の outputs を本PJに同梱するか、上記の sync を行うこと。
+          if ls research/EXP-FX000001/10-result/trades-*.json 1> /dev/null 2>&1; then
+            python scripts/generate_charts.py
+          else
+            echo "WARN: trades-*.json が見つかりません。チャート生成をスキップします。"
+            echo "(ローカルでラボ PJ から取り込み後に再 push してください)"
+          fi
+
+      - name: Build with mkdocs (strict mode)
+        run: mkdocs build --strict
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

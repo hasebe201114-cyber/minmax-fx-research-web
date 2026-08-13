@@ -1,0 +1,9 @@
+# Build-time-only dependencies
+#
+# 通常の mkdocs build / mkdocs serve には不要。
+# `scripts/generate_charts.py` 実行時のみ必要:
+#   python -m pip install -r requirements-build.txt
+#
+# Note: Web サイト本体 (静的 HTML) には matplotlib を含めない (サイズ肥大化防止)。
+
+matplotlib>=3.8
