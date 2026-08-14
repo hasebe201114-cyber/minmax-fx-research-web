@@ -49,6 +49,10 @@ nav:
   - バックテスト結果:
     - サマリ: backtest-results/index.md
     - 2024 USD/JPY: backtest-results/usd-jpy-2024.md
+    - 2024 EUR/JPY: backtest-results/eur-jpy-2024.md
+    - 2024 GBP/JPY: backtest-results/gbp-jpy-2024.md
+    - 2024 AUD/JPY: backtest-results/aud-jpy-2024.md
+    - 2024 EUR/USD: backtest-results/eur-usd-2024.md
   - 資料・議事録: papers/index.md
   - Adversarial レビュー: papers/adversarial/index.md
 

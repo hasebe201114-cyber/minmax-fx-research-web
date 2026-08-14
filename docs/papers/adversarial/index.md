@@ -1,26 +1,25 @@
-# Adversarial レビュー
+# Adversarial レビュー (C 品質チーム)
 
-> ラボ PJ (minmax-fx-day-trading-lab) の採用判断に対する adversarial レビュー記録。
-> `scripts/sync_from_lab.py` でラボ PJ の `obs/.../85外部レビュー/` から取り込み。
+> ラボ PJ の `minmax-fx-day-trading-lab` で実施された C 品質チーム (adversarial-reviewer) による懐疑的検証の記録。
+> 透明性確保のため、レビュー本体も `sync_from_lab.py` 経由で本PJに取り込んで公開しています。
 
-## 一覧
+## レビュー一覧
 
-| OBS ID | タイトル | 対象戦略 / 通貨 | 判定 | 取込日 |
-|---|---|---|---|---|
-| OBS000004 | SYS-FX007 AUD/JPY 採用候補 adversarial レビュー | SYS-FX007 v2 / AUD_JPY | 保留 | 2026-08-14 |
+| OBS | 対象 | 結論 | 取り込み元 |
+|---|---|---|---|
+| [OBS000004](OBS000004-SYSFX007-AUDJPY採用候補-adversarialレビュー.md) | AUD/JPY 採用候補 (PROVISIONAL ACCEPT → 保留) | 7 件の差し戻し指摘 (1-2 完了, 3-7 残) | `obs/.../85外部レビュー/` |
 
-## 個別ページ
+## C 品質チームの役割 (再掲)
 
-- [OBS000004 - SYS-FX007 AUD/JPY「採用候補」に対する Adversarial レビュー](OBS000004-SYSFX007-AUDJPY採用候補-adversarialレビュー.md)
+ラボ PJ のマルチエージェント体制において、C 品質チーム (adversarial-reviewer) は:
 
-## ラボ PJ 取り込み方法
+- 良好結果への **懐疑的検証** (HARKing 防止の最終砦)
+- 採用/不採用の **断定的判断** (ただし最終 GO は人間 = 司令塔)
+- 不採用案件も**教育的観点から残す**判断プロセスの透明性確保
 
-```powershell
-# adversarial レビューだけ取り込み
-python scripts/sync_from_lab.py --only papers
+## 凡例
 
-# 全件 (ablation + papers)
-python scripts/sync_from_lab.py
-```
-
-機密情報 (API_KEY, .env, 口座残高, 個人損益) が含まれるファイルは自動 skip されます。
+- ✅ **ACCEPT**: K1m〜K7m すべてクリア、本採用候補
+- ⏸ **PROVISIONAL ACCEPT**: K1m〜K7m 概ねクリア、追加検証待ち
+- ⏸ **保留**: 過学習検証 (train/val/test) 未完了
+- ❌ **REJECT**: K1m〜K7m のいずれか未達

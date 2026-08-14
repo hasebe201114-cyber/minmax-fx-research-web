@@ -66,4 +66,4 @@ EUR/USD が 49 戦全敗（SL 1.5×ATR が M5 ノイズと同水準で機能不�
 
 <!-- minmax-fx-research-web 取り込み情報 -->
 <!-- synced_from: obs\minmax_fx_day_trading_lab\85外部レビュー\OBS000004-SYSFX007-AUDJPY採用候補-adversarialレビュー.md -->
-<!-- synced_at: 2026-08-13T22:58:41Z -->
+<!-- synced_at: 2026-08-14T04:04:25Z -->
