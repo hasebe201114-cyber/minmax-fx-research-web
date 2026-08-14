@@ -6,11 +6,10 @@ on:
       - main
   workflow_dispatch:
 
-# GitHub Pages デプロイに必要な権限
+# mkdocs gh-deploy で gh-pages ブランチへ直接 push するため contents: write が必要
+# (actions/deploy-pages@v4 と異なり github-pages environment 保護ルールの対象外)
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # 同時デプロイの防止 (古いビルドのデプロイ回避)
 concurrency:
@@ -18,12 +17,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build site
+  build-and-deploy:
+    name: Build and Deploy to gh-pages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (full history for mkdocs gh-deploy)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,8 +41,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Install build-time dependencies (matplotlib, for chart generation)
-        run: |
-          pip install -r requirements-build.txt
+        run: pip install -r requirements-build.txt
 
       - name: Sync artifacts from lab PJ (best-effort)
         # ラボ PJ (minmax-fx-day-trading-lab) は別リポのため CI では取得不可。
@@ -51,9 +51,9 @@ jobs:
           echo "Run scripts/sync_from_lab.py locally before pushing if you need fresh lab data."
 
       - name: Generate charts (balance / drawdown)
+        # ラボ PJ からの trades-*.json が必要。
+        # ラボ PJ の outputs を本PJに同梱するか、上記の sync を行うこと。
         run: |
-          # ラボ PJ からの trades-*.json が必要。
-          # ラボ PJ の outputs を本PJに同梱するか、上記の sync を行うこと。
           if ls research/EXP-FX000001/10-result/trades-*.json 1> /dev/null 2>&1; then
             python scripts/generate_charts.py
           else
@@ -61,25 +61,10 @@ jobs:
             echo "(ローカルでラボ PJ から取り込み後に再 push してください)"
           fi
 
-      - name: Build with mkdocs (strict mode)
-        run: mkdocs build --strict
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build and deploy to gh-pages
+        # mkdocs gh-deploy が build (--strict 込み) → gh-pages ブランチへの push まで一気通貫
+        # 環境保護ルールに引っかからない (environment 指定なし、gh-pages ブランチは GitHub 自動 Pages deploy が処理)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdocs gh-deploy --force --strict --clean
