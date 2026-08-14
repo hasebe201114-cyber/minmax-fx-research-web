@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../papers/">
+        <link rel="next" href="../eur-jpy-2024/">
       
       
         
@@ -621,6 +621,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -806,6 +814,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usdjpy-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USD/JPY 4 プリセット アブレーション
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -820,6 +839,118 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eur-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 EUR/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gbp-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 GBP/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aud-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 AUD/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eur-usd-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 EUR/USD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -974,6 +1105,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usdjpy-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USD/JPY 4 プリセット アブレーション
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1005,6 +1147,10 @@
 
 
 <h1 id="2024-usdjpy">2024 USD/JPY バックテスト結果<a class="headerlink" href="#2024-usdjpy" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">本ページの数値は 2026-08-13 ラボ PJ 実行 (A1_A2_combined プリセット, スワップ未考慮) に基づきます</p>
+<p>旧ページでは数値が USD/JPY ではなく AUD/JPY のものを誤って掲載していました (2026-08-14 修正)。</p>
+</div>
 <h2 id="_1">サマリ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1020,7 +1166,7 @@
 </tr>
 <tr>
 <td>プリセット</td>
-<td>A1_A2_combined</td>
+<td>A1_A2_combined (SL 1.5 ATR / Donchian 50 / ADX 20)</td>
 </tr>
 <tr>
 <td>期間</td>
@@ -1056,77 +1202,146 @@
 <tbody>
 <tr>
 <td>トレード数</td>
-<td>60</td>
+<td>58</td>
 <td>—</td>
 </tr>
 <tr>
 <td>勝率</td>
-<td>53.3%</td>
+<td>24.14%</td>
 <td>—</td>
 </tr>
 <tr>
 <td>シャープ (月次)</td>
-<td>1.86</td>
-<td>✅ K1m 合格</td>
+<td>-2.879</td>
+<td>❌ K1m 違反 (&lt; 0.4)</td>
 </tr>
 <tr>
 <td>Profit Factor</td>
-<td>1.74</td>
-<td>✅ K1m 合格</td>
+<td>0.327</td>
+<td>❌ K1m 違反 (&lt; 1.2)</td>
 </tr>
 <tr>
 <td>期待値 (JPY)</td>
-<td>+12.0</td>
-<td>⚠️ K5m ぎりぎり</td>
+<td>-327.92</td>
+<td>❌ K1m 違反 (&lt; 0)</td>
 </tr>
 <tr>
 <td>最大 DD (%)</td>
-<td>0.19</td>
-<td>✅ K2m 優秀</td>
+<td>1.92</td>
+<td>✅ K2m 合格 (≤ 10%)</td>
 </tr>
 <tr>
 <td>最大連続負</td>
-<td>5</td>
-<td>⚠️ K3m 余裕度不足</td>
+<td>15</td>
+<td>❌ K3m 違反 (&gt; 5)</td>
 </tr>
 <tr>
 <td>ペイオフレシオ</td>
-<td>1.45</td>
+<td>1.026</td>
 <td>❌ K4m 違反 (&lt; 1.5)</td>
 </tr>
 <tr>
 <td>総損益 (JPY)</td>
-<td>+720</td>
-<td>✅</td>
+<td>-19,019</td>
+<td>❌ 赤字</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_3">バランス曲線 / ドローダウン<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><code>scripts/generate_charts.py</code> でラボ PJ の <code>trades-USD_JPY-2024.json</code> から生成 (130 トレード)。</p>
+<p><code>scripts/generate_charts.py</code> でラボ PJ の <code>trades-USD_JPY-2024.json</code> から生成。
+現時点でラボ PJ に保存されているトレード履歴は <strong>Base プリセット (130 トレード, PnL -35,108 JPY)</strong> のみ。
+A1_A2_combined プリセット (58 トレード) のトレードファイルはラボ PJ に未保存のため、
+以下は参考チャートです (A1_A2_combined の数値とは別)。</p>
 <p><img alt="バランス曲線" src="../../assets/charts/USD_JPY-balance.png" /></p>
 <p><img alt="ドローダウン" src="../../assets/charts/USD_JPY-dd.png" /></p>
 <blockquote>
-<p>注: チャートは A1_A2_combined プリセットの 2024 年トレードを逐次累積したもので、
-上記「結果」表 (60 トレード) とはロットサイズ/期間カウント基準が異なります。
-数値は最新バックテスト出力 (2026-08-13 ラボ PJ 実行) に基づきます。</p>
+<p>Base プリセット 130 トレード: 勝率 15.4%, PF 0.245, シャープ -3.876, 総損益 -35,108 JPY, max DD 36,668 JPY</p>
+<p>※ ラボ PJ のトレード履歴保存スクリプト (<code>scripts/analyze_trades.py</code> 等) は最新プリセットでの再実行が未完了。
+A1_A2_combined 用のトレードファイル生成は差し戻し 3 完了後の予定。</p>
 </blockquote>
 <h2 id="obs000003">OBS000003 採用判定<a class="headerlink" href="#obs000003" title="Permanent link">&para;</a></h2>
 <p><strong>REJECT</strong></p>
 <h3 id="_4">理由<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>期待値 +12.0 JPY は K5m 基準 (スプレッド往復 × 3) を下回る</strong></li>
-<li>USD/JPY スプレッド往復 = 0.3 × 2 = 0.6 pips</li>
-<li>K5m 基準 = 0.6 × 3 = 1.8 pips ≒ 180 JPY (1 lot 想定)</li>
-<li>期待値 12.0 JPY ≒ 0.12 pips → K5m 基準 1.8 pips の <strong>6.7%</strong> のみ</li>
-<li><strong>ペイオフレシオ 1.45 &lt; 1.5</strong> (K4m 違反)</li>
-<li><strong>最大連続負 5</strong> (K3m ぎりぎり)</li>
-<li>EUR/JPY 等他通貨で代替可能</li>
+<li><strong>PF 0.327 &lt; 1.0</strong> (K1m 違反、期待値ベースで赤字)</li>
+<li><strong>シャープ -2.879</strong> (月次大幅マイナス、9 ヶ月連続赤字)</li>
+<li><strong>ペイオフレシオ 1.026 &lt; 1.5</strong> (K4m 違反)</li>
+<li><strong>最大連続負 15</strong> (K3m 5 以下を大幅超過)</li>
+<li><strong>USD/JPY 2024 は構造的にレンジ相場でブレイクが機能しなかった</strong> 可能性</li>
+<li>期待値 -327.92 JPY は K5m 基準 (USD/JPY スプレッド往復 0.6 pips × 3 ≒ 180 JPY) を<strong>下回る</strong>どころか大幅マイナス</li>
 </ol>
+<h2 id="usdjpy-4">USD/JPY 4 プリセット アブレーション<a class="headerlink" href="#usdjpy-4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>プリセット</th>
+<th>トレード数</th>
+<th>勝率</th>
+<th>PF</th>
+<th>シャープ</th>
+<th>総損益 (JPY)</th>
+<th>DD%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base</td>
+<td>130</td>
+<td>15.4%</td>
+<td>0.245</td>
+<td>-3.876</td>
+<td>-35,108</td>
+<td>3.58</td>
+</tr>
+<tr>
+<td>A1_SL_TP</td>
+<td>76</td>
+<td>25.0%</td>
+<td>0.435</td>
+<td>-2.175</td>
+<td>-22,468</td>
+<td>2.39</td>
+</tr>
+<tr>
+<td>A2_Donchian50</td>
+<td>103</td>
+<td>14.6%</td>
+<td>0.206</td>
+<td>-2.982</td>
+<td>-27,268</td>
+<td>2.73</td>
+</tr>
+<tr>
+<td><strong>A1_A2_combined</strong></td>
+<td><strong>58</strong></td>
+<td><strong>24.1%</strong></td>
+<td><strong>0.327</strong></td>
+<td><strong>-2.879</strong></td>
+<td><strong>-19,019</strong></td>
+<td><strong>1.92</strong></td>
+</tr>
+<tr>
+<td>A3_ADX30</td>
+<td>31</td>
+<td>16.1%</td>
+<td>0.129</td>
+<td>-1.082</td>
+<td>-13,274</td>
+<td>1.38</td>
+</tr>
+</tbody>
+</table>
+<p><strong>効果分離</strong> (ラボ PJ 引き継ぎ §0 より):
+- A1 (SL/TP 拡大): 勝率 +9.6 pt、PF +0.19 → <strong>単独で最も効くレバー</strong>
+- A2 (Donchian 長期化): 勝率ほぼ変わらず、PF やや悪化 → 抜本的解決策にならない
+- A1+A2 (複合): PnL/DD 最小の守りの構成だが黒字化未達
+- A3 (ADX 30 強化): エントリー数 31 に激減、PF さらに悪化 → <strong>見送り</strong></p>
 <h2 id="_5">次のアクション<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>EUR/JPY, GBP/JPY, AUD/JPY, EUR/USD で同条件の検証</li>
-<li>期待値が大きく、かつ K5m を超える通貨を採用候補とする</li>
-<li>AUD/JPY が有望 (期待値 +107.9 JPY, K5m を大幅クリア) → ただし train/val/test 分離検証待ちで「保留」</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> AUD/JPY で同条件検証 → <strong>スワップ込みで黒字維持確認</strong> (PF 1.99, シャープ 1.80, PnL +5,828)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AUD/JPY を「保留」からの PROVISIONAL ACCEPT へ格上げ → train/val/test 分離検証 (差し戻し 3) 待ち</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> USD/JPY 2023 / 2025 再評価 (時期尚早、優先度低)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> EUR/JPY, GBP/JPY は A1_A2_combined で検証済み (それぞれ赤字/微黒字)</li>
 </ul>
 
 

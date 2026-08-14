@@ -2,46 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/about/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
+    </url>
+    <url>
+         <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/aud-jpy-2024/</loc>
+         <lastmod>2026-08-14</lastmod>
+    </url>
+    <url>
+         <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/eur-jpy-2024/</loc>
+         <lastmod>2026-08-14</lastmod>
+    </url>
+    <url>
+         <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/eur-usd-2024/</loc>
+         <lastmod>2026-08-14</lastmod>
+    </url>
+    <url>
+         <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/gbp-jpy-2024/</loc>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/backtest-results/usd-jpy-2024/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/papers/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/papers/adversarial/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/papers/adversarial/OBS000004-SYSFX007-AUDJPY%E6%8E%A1%E7%94%A8%E5%80%99%E8%A3%9C-adversarial%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/research/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/research/ablation/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/research/pair-pivot/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
     <url>
          <loc>https://hasebe201114-cyber.github.io/minmax-fx-research-web/research/strategy-spec/</loc>
-         <lastmod>2026-08-13</lastmod>
+         <lastmod>2026-08-14</lastmod>
     </url>
 </urlset>

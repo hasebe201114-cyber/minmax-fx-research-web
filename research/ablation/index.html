@@ -641,10 +641,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#usdjpy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        プリセット比較
+        USD/JPY プリセット比較
       
     </span>
   </a>
@@ -652,7 +652,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#pj-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        効果分離 (ラボ PJ 引き継ぎ §3 抜粋)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         結論
@@ -663,7 +674,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         残りの検証
@@ -700,6 +711,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -773,6 +792,118 @@
     
   
     2024 USD/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtest-results/eur-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 EUR/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtest-results/gbp-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 GBP/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtest-results/aud-jpy-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 AUD/JPY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backtest-results/eur-usd-2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024 EUR/USD
   
 
     
@@ -874,10 +1005,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#usdjpy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        プリセット比較
+        USD/JPY プリセット比較
       
     </span>
   </a>
@@ -885,7 +1016,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#pj-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        効果分離 (ラボ PJ 引き継ぎ §3 抜粋)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         結論
@@ -896,7 +1038,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         残りの検証
@@ -928,73 +1070,110 @@
 
 <h1 id="_1">アブレーション結果<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>戦略パラメータの寄与度を測定 (USD/JPY 2024)</p>
+<p>戦略パラメータの寄与度を測定 (USD/JPY 2024, ラボ PJ 2026-08-13 実行分)。</p>
 </blockquote>
-<h2 id="_2">プリセット比較<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="usdjpy">USD/JPY プリセット比較<a class="headerlink" href="#usdjpy" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>プリセット</th>
-<th>シャープ</th>
+<th>トレード数</th>
+<th>勝率</th>
 <th>PF</th>
-<th>期待値</th>
+<th>シャープ</th>
+<th>期待値 (JPY)</th>
 <th>連続負</th>
+<th>DD (%)</th>
+<th>総損益 (JPY)</th>
 <th>主な変更点</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Base</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>ベースライン (SL 1.0 ATR, RR 2.0, Donchian 20)</td>
+<td>130</td>
+<td>15.4%</td>
+<td>0.245</td>
+<td>-3.876</td>
+<td>-270</td>
+<td>17</td>
+<td>3.58</td>
+<td>-35,108</td>
+<td>SL 1.0 ATR, RR 2.0, Donchian 20</td>
 </tr>
 <tr>
 <td>A1_SL_TP</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>SL 1.5 ATR + RR 3.0 (TP 拡大)</td>
+<td>76</td>
+<td>25.0%</td>
+<td>0.435</td>
+<td>-2.175</td>
+<td>-296</td>
+<td>14</td>
+<td>2.39</td>
+<td>-22,468</td>
+<td>SL 1.5 ATR + RR 2.0 (TP 拡大)</td>
 </tr>
 <tr>
 <td>A2_Donchian50</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
+<td>103</td>
+<td>14.6%</td>
+<td>0.206</td>
+<td>-2.982</td>
+<td>-265</td>
+<td>19</td>
+<td>2.73</td>
+<td>-27,268</td>
 <td>Donchian 期間 50 (長期化)</td>
 </tr>
 <tr>
 <td><strong>A1_A2_combined</strong></td>
-<td><strong>1.86</strong></td>
-<td><strong>1.74</strong></td>
-<td><strong>+12.0</strong></td>
-<td>5</td>
+<td><strong>58</strong></td>
+<td><strong>24.1%</strong></td>
+<td><strong>0.327</strong></td>
+<td><strong>-2.879</strong></td>
+<td><strong>-328</strong></td>
+<td><strong>15</strong></td>
+<td><strong>1.92</strong></td>
+<td><strong>-19,019</strong></td>
 <td>A1 + A2 同時適用</td>
 </tr>
 <tr>
 <td>A3_ADX30</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
+<td>31</td>
+<td>16.1%</td>
+<td>0.129</td>
+<td>-1.082</td>
+<td>-428</td>
+<td>14</td>
+<td>1.38</td>
+<td>-13,274</td>
 <td>ADX 30 + SMA 50/200 (長期化)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_3">結論<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>注: A4_PullbackDepth は preset 定義はあるが未実行 (ラボ PJ 引き継ぎ §6.3 待ち)。</p>
+</blockquote>
+<h2 id="pj-3">効果分離 (ラボ PJ 引き継ぎ §3 抜粋)<a class="headerlink" href="#pj-3" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>A1_SL_TP と A2_Donchian50 の組み合わせ</strong> が USD/JPY では最高性能</li>
-<li>AUD/JPY でも同じ組み合わせが A1_A2_combined として有望</li>
+<li><strong>A1 (SL/TP 拡大)</strong>: 勝率 +9.6 pt、PF +0.19 → <strong>最も効く単独レバー</strong></li>
+<li><strong>A2 (Donchian 長期化)</strong>: 勝率ほぼ変わらず、PF やや悪化 → <strong>抜本的解決策にならない</strong></li>
+<li><strong>A1+A2 (複合)</strong>: PnL/DD 最小の守りの構成、ただし黒字化未達</li>
+<li><strong>A3 (ADX 30 強化)</strong>: エントリー数 31 に激減、PF さらに悪化 → <strong>見送り</strong></li>
+</ul>
+<h2 id="_2">結論<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>A1+A2_combined が USD/JPY では最良</strong> (PF / PnL / DD すべてで他プリセットを上回る)</li>
+<li>ただし全プリセットで<strong>黒字化未達</strong> → USD/JPY 2024 の構造的問題</li>
+<li>AUD/JPY でも A1_A2_combined が 4 通貨中で最良 (シャープ 1.80, PF 1.99, PnL +5,828 JPY)</li>
 <li>A3_ADX30 は長期足重視すぎて、エントリー機会が減少 → 採用見送り</li>
 </ul>
-<h2 id="_4">残りの検証<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>5 通貨 × 3 期間の train/val/test 分離検証</li>
-<li>permutation test で統計的有意性確認</li>
+<h2 id="_3">残りの検証<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> A4_PullbackDepth (A3 で改善しなければ着手) — プルバック深さ 0.5 ATR 以上</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> A5_トレイリングTP (長期検討) — TP 到達後の伸び取り</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 5 通貨 × 3 期間の train/val/test 分離検証 (差し戻し 3)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> permutation test で統計的有意性確認 (差し戻し 4)</li>
 </ul>
 
 
